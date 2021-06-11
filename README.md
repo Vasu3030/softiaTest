@@ -10,7 +10,7 @@ Si vous n'avez pas composer d'installé sur votre machine, faites ceci:
 `php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"`\
 `php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified';\ } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"`\
 `php composer-setup.php`\
-`php -r "unlink('composer-setup.php');"`\
+`php -r "unlink('composer-setup.php');"`  
 
 `composer install` ou dans le cas où vous venez de l'installer juste au dessus `php composer.phar install`
 
@@ -38,7 +38,7 @@ Remplissez ces lignes par vos informations :
 `DB_PORT=3306`\
 `DB_DATABASE=NomDeLaBaseDeDonnées`\
 `DB_USERNAME=root`\
-`DB_PASSWORD=MotDePasse`\
+`DB_PASSWORD=MotDePasse`  
 
 Normalement il suffit juste de changer la variable DB_DATABASE et DB_PASSWORD, peut être aussi DB_USERNAME si vous utilisez un autre user que root pour vous connecter à MySQL
 
