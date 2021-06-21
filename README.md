@@ -46,6 +46,13 @@ Normalement il suffit juste de changer la variable DB_DATABASE et DB_PASSWORD, p
 
 `php artisan migrate:refresh --seed`
 
+Si vous recevez l'erreur : "SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client (SQL: select * from information_schema.tables where table_schema = aviandb and table_name = migrations)":
+
+Vous devez créer un utilisateur mysql: `CREATE USER 'user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'yourpassword';`
+Et lui donner les privilèges: `GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' WITH GRANT OPTION;`
+
+N'oubliez pas de changer ensuite le .env en mettant les informations du user que vous venez de créer
+
 ## Lancez le serveur et rendez vous sur le site
 
 `php artisan serve`
